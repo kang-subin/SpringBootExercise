@@ -1,5 +1,6 @@
 package com.example.springboot.dao;
 
+import com.example.springboot.controller.HospitalController;
 import com.example.springboot.domein.Hospital;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
@@ -13,7 +14,9 @@ public class HospitalDao {
         private final JdbcTemplate jdbcTemplate;  // Autowired 할 경우 test 에서 생성자 주입을 해줘야함 대신 private final = DI
 
         public HospitalDao(JdbcTemplate jdbcTemplate) {
-            this.jdbcTemplate = jdbcTemplate;
+    this.jdbcTemplate = jdbcTemplate;
+
+
         }
 
         // List<Hospital> - 11만건이 들어있음. Hospital
@@ -74,7 +77,9 @@ public class HospitalDao {
         return this.jdbcTemplate.queryForObject(sql, rowMapper, id);
     }
 
-}
+
+    }
+
 
 
 

@@ -10,6 +10,7 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @NoArgsConstructor
+
 public class Hospital { // DB와 연결되는 객체
     private int id;
     private String openServiceName;
