@@ -1,5 +1,6 @@
 package com.example.springboot.parser;
 
+import com.example.springboot.domein.Hospital;
 import org.springframework.stereotype.Component;
 
 import java.io.BufferedReader;
@@ -24,6 +25,7 @@ public class ReadLineContext <T>{ // T 의미 이 class에서 사용되는 객�
             );
             String str; // 파일의 한 줄
             reader.readLine();
+            System.out.println(reader.readLine());
             while ((str = reader.readLine()) != null) {
                 try {
                     result.add(parser.parse(str)); // HospitalParser 사용 됨
@@ -34,5 +36,6 @@ public class ReadLineContext <T>{ // T 의미 이 class에서 사용되는 객�
             reader.close();
             return result;
         }
-    }
+
+}
 

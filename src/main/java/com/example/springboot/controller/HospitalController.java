@@ -5,9 +5,11 @@ import com.example.springboot.domein.Hospital;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.sql.SQLException;
+import java.util.Optional;
+
 @RequestMapping("/api/v1/hospitals")
 @RestController // 자동으로
 public class HospitalController {
@@ -17,12 +19,20 @@ public class HospitalController {
         this.hospitalDao = hospitalDao;
     }
 
-    @PostMapping("/add")
-    public ResponseEntity<String> add(Hospital hospital) {
-        hospitalDao.add(hospital);
+    @GetMapping("/getCount")
+    public ResponseEntity<Integer> getCount() {
         return ResponseEntity
                 .status(HttpStatus.ACCEPTED)
-                .body("추가완료");
+                .body(hospitalDao.getCount());
     }
 
+    @GetMapping("/find")
+    public ResponseEntity<Hospital> findById(int id) throws SQLException, ClassNotFoundException {
+        return ResponseEntity
+                .status(HttpStatus.ACCEPTED)
+                .body(hospitalDao.findById(id));
+        
+    }
 }
+
+

@@ -11,7 +11,7 @@ public class HospitalParser implements Parser <Hospital> { // 인터페이스 �
         String[] row = str.split("\",\"");
 
         Hospital hospital = new Hospital();
-        hospital.setId(Integer.parseInt(row[0].replace("\"", "")));
+        hospital.setId(Integer.parseInt(row[0].replace("\"","")));
         hospital.setOpenServiceName(row[1]);
         hospital.setOpenLocalGovernmentCode(Integer.parseInt(row[3]));
         hospital.setManagementNumber(row[4]);
