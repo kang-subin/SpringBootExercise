@@ -18,7 +18,7 @@ public class HospitalDao {
 
         // List<Hospital> - 11만건이 들어있음. Hospital
         public void add(Hospital hospital){
-            String sql = "INSERT INTO `likelion-db`.`nation_wide_hospital`  " +
+            String sql = "INSERT INTO `likelion-db`.`nation_wide_hospitals`  " +
                     "(`id`, `open_service_name`, `open_local_government_code`, " +
                     "`management_number`, `license_date`, `business_status`, " +
                     "`business_status_code`, `phone`, `full_address`, " +
@@ -44,7 +44,7 @@ public class HospitalDao {
         }
 
     public int getCount() {
-        String sql = "select count(*) from nation_wide_hospital";
+        String sql = "select count(*) from nation_wide_hospitals";
         return this.jdbcTemplate.queryForObject(sql, Integer.class);
     }
 
@@ -75,7 +75,7 @@ public class HospitalDao {
     };
 
     public Hospital findById(int id) throws ClassNotFoundException, SQLException {
-        String sql = "select * from nation_wide_hospital where id = ?";
+        String sql = "select * from nation_wide_hospitals where id = ?";
         return this.jdbcTemplate.queryForObject(sql, rowMapper, id);
     }
 
