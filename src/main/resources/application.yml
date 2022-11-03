@@ -7,4 +7,4 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://ec2-3-38-207-209.ap-northeast-2.compute.amazonaws.com:3306/likelion-db
     username: root
-    password:
+    password: 12345678

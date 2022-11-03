@@ -18,7 +18,7 @@ public class HospitalDao {
 
         // List<Hospital> - 11만건이 들어있음. Hospital
         public void add(Hospital hospital){
-            String sql = "INSERT INTO `likelion-db`.`nation_wide_hospitals`  " +
+            String sql = "INSERT INTO `likelion-db`.`nation_wide_hospital`  " +
                     "(`id`, `open_service_name`, `open_local_government_code`, " +
                     "`management_number`, `license_date`, `business_status`, " +
                     "`business_status_code`, `phone`, `full_address`, " +
