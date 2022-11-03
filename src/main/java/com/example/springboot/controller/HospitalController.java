@@ -11,7 +11,7 @@ import java.sql.SQLException;
 import java.util.Optional;
 
 @RequestMapping("/api/v1/hospitals")
-@RestController // 자동으로
+@RestController //
 public class HospitalController {
     private final HospitalDao hospitalDao; // 이렇게 주입할 경우 component 로 사용가능
 
@@ -31,7 +31,7 @@ public class HospitalController {
         return ResponseEntity
                 .status(HttpStatus.ACCEPTED)
                 .body(hospitalDao.findById(id));
-        
+
     }
 }
 
