@@ -1,14 +1,12 @@
 package com.example.springboot.controller;
 
 import com.example.springboot.dao.HospitalDao;
-import com.example.springboot.domein.Hospital;
+import com.example.springboot.domain.Hospital;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.*;
 
 import java.sql.SQLException;
-import java.util.Optional;
 
 @RequestMapping("/api/v1/hospitals")
 @RestController //

@@ -1,7 +1,6 @@
 package com.example.springboot.dao;
 
-import com.example.springboot.controller.HospitalController;
-import com.example.springboot.domein.Hospital;
+import com.example.springboot.domain.Hospital;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Component;
